@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+
+    class List {
+      constructor(a, b) {
+        this.a = a;
+        this.b = b;
+      }
+      method() {
+        console.log(this.a * this.b);
+      }
+    }
+    const list = new List(10, 40)
+    console.log(list);
+    list.method();
+    //---------------------------------------------------------
+    class Veg {
+      constructor(name, color) {
+        this.nam = name;
+        this.colo = color;
+      }
+      show() {
+        console.log(`${this.nam}の色は${this.colo}です`)
+      }
+    }
+    const tomato = new Veg('トマト', '赤')
+    console.log(tomato);
+    tomato.show();
+
+    //---------------------------------------------------------
+
+    class MainCity {
+      constructor(city, population) {
+
+        this.city = city;
+        this.population = population;
+      }
+
+      infomation() {
+        console.log(`${this.city}の人口は${this.population}です`);
+      }
+    }
+
+    const Hokkaido = new MainCity('札幌市', '200万人');
+    Hokkaido.infomation();
+
+    const Miyagi = new MainCity('仙台市', '108万人');
+    Miyagi.infomation();
+
+
+    /////////////////////////////////////////////////////////////
+    //
+    //   ①クラス名は、インスタンス名と被らないようにするため大文字スタートにする
+    //   　インスタンス名は小文字スタート
+    //     class Thing{}
+    //     const thing = new Thing();
+    //   ②メソッド定義時、「メソッド:」のように書くとエラーになる  
+    //
+    //　　　　例　　メソッド: () => {}
+    //   　　　　　メソッド: function(){}
+    //
+    /////////////////////////////////////////////////////////////
+  </script>
+</body>
+
+</html>
